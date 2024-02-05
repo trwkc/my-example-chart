@@ -1,0 +1,19 @@
+# Default values for my-example-chart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+name: my-example
+replicaCount: 1
+
+image:
+  repository: phpmyadmin
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "5.2.0"
+
+service:
+  type: ClusterIP
+  port: 80
+
+mysql:
+  auth:
+    rootPassword: pass12345

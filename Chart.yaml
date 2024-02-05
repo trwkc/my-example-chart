@@ -1,0 +1,16 @@
+apiVersion: v2
+name: my-example-chart
+version: 0.0.1
+description: my chart for test phpmyadmin connect to mysql
+type: application
+
+appVersion: "5.2.0"
+
+dependencies:
+  - name: mysql
+    version: "9.19.1"
+    repository: oci://registry-1.docker.io/bitnamicharts
+
+maintainers:
+- name: trwkc
+  url: https://github.com/trwkc
